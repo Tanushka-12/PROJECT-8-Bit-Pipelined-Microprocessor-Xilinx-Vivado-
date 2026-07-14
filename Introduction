@@ -1,0 +1,31 @@
+Reduced Instruction Set Computer (RISC) architecture improves processor performance by 
+simplifying instruction sets, minimizing memory access, and emphasizing register-based 
+operations. In RISC systems, computations are primarily performed within processor 
+registers using fixed-length instructions and limited addressing modes, enabling faster 
+decoding and execution. Techniques such as pipelining further enhance throughput by 
+overlapping instruction stages including fetch, decode, and execute. However, the design of 
+compact and efficient Arithmetic Logic Units (ALUs) and register files remains critical for 
+achieving low-area and low-power processor implementations, particularly in embedded and 
+FPGA-based systems. 
+
+This work presents the design and implementation of an 8-bit ALU and Register File using 
+Verilog HDL as core components of a mini processor system. The ALU supports a range of 
+arithmetic and logical operations, including addition, subtraction, multiplication, division, 
+increment, decrement, AND, OR, and XOR, along with accurate generation of status flags 
+such as Zero, Carry, and Auxiliary Carry. The register file is designed with multiple general
+purpose registers to enable efficient data storage and transfer. The design emphasizes 
+deterministic operation through proper initialization, controlled data flow, and reliable 
+handling of exceptional conditions such as division by zero. A modular design methodology is 
+adopted using standard combinational and sequential building blocks, and functional 
+simulation verifies the correctness and robustness of the system. 
+
+For hardware validation, the design is synthesized on a Xilinx xc7a35tcpg236-1 FPGA 
+device. The implementation demonstrates compact resource utilization, occupying 208 Look
+Up Tables (1.00% of 20,800), 108 Flip-Flops (0.26% of 41,600), 10 I/O pins (9.43% of 106), 
+and one global buffer (3.13% of 32). The total on-chip power consumption is measured at 
+3.164 W, with a junction temperature of 40.8 °C and a thermal margin of 44.2 °C. Although 
+the power estimation confidence is reported as low, the results indicate that the proposed 
+design achieves efficient performance with minimal resource overhead. 
+The proposed implementation demonstrates a compact, reliable, and scalable processor 
+component design, making it suitable for low-cost and low-power embedded system 
+applications.
